@@ -1,0 +1,14 @@
+public class Areaderectangulo {
+
+    public static void main(String[] args) {
+        
+         Scanner teclado = new Scanner(System.in);
+        System.out.print("Ingrese la longitud del rectángulo: ");
+        double longitud = teclado.nextDouble();
+        System.out.print("Ingrese la anchura del rectángulo: ");
+        double anchura = teclado.nextDouble();
+
+        double area = longitud * anchura;
+        System.out.println("El área del rectángulo es: " + area);
+    }
+}
