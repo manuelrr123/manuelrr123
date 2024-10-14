@@ -1,0 +1,19 @@
+public class Masacorporal {
+
+    public static void main(String[] args) {
+        
+        Scanner teclado = new Scanner(System.in);
+        
+      
+        System.out.print("Ingrese su peso: ");
+        double peso = teclado.nextDouble();
+
+        System.out.print("Ingrese su altura: ");
+        double altura = teclado.nextDouble();
+
+        
+        double imc = peso / (altura * altura);
+        System.out.printf("Su Masa Corporal es: " +imc);
+        
+    }
+}
