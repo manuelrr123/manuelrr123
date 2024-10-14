@@ -1,0 +1,23 @@
+public class Salariodeempleado {
+
+    public static void main(String[] args) {
+         Scanner teclado = new Scanner(System.in);
+        
+
+        System.out.print("Salario mensual: ");
+        double salarioBruto = teclado.nextDouble();
+
+        System.out.print("Porcentaje de impuestos: ");
+        double porcentajeImpuestos = teclado.nextDouble();
+
+        System.out.print("Deducciones adicionales: ");
+        double deduccionesAdicionales = teclado.nextDouble();
+
+        
+        double impuesto = salarioBruto * (porcentajeImpuestos / 100);
+        double salarioNeto = salarioBruto - impuesto - deduccionesAdicionales;
+
+        
+        System.out.printf("El salario neto es: "+salarioNeto);
+    }
+}
