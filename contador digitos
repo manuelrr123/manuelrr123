@@ -1,0 +1,14 @@
+public class ContadordeDigitos {
+
+    public static void main(String[] args) {
+        
+        int numero;
+
+       Scanner teclado = new Scanner(System.in);
+        System.out.print("Ingrese un número entero: ");
+        numero = teclado.nextInt();
+
+        int contador = String.valueOf(Math.abs(numero)).length();
+        System.out.println("El número tiene " + contador + " dígitos.");
+    }
+}
