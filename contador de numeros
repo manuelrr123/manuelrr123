@@ -1,0 +1,38 @@
+public class Conteonumer {
+
+    public static void main(String[] args) {
+        
+        int cantidad;
+        int mayores;
+        int menores;
+        int iguales;
+        int numero;
+        int i;
+        
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.print("Ingrese la cantidad de números: ");
+        
+        cantidad = teclado.nextInt();
+
+         mayores = 0;
+         menores = 0;
+         iguales = 0;
+
+        for ( i = 0; i < cantidad; i++) {
+            System.out.print("Ingrese un número: ");
+            numero = teclado.nextInt();
+            if (numero > 0) {
+                mayores++;
+            } else if (numero < 0) {
+                menores++;
+            } else {
+                iguales++;
+            }
+        }
+
+    }
+}
+
+
+
