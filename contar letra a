@@ -1,0 +1,20 @@
+public class Contarletrasa {
+
+    public static void main(String[] args) {
+        int contador;
+        int i;
+    Scanner teclado = new Scanner(System.in);
+        System.out.print("Ingrese una palabra: ");
+        
+        String palabra = teclado.nextLine().toLowerCase();
+        
+ contador = 0;
+        for ( i = 0; i < palabra.length(); i++) {
+            if (palabra.charAt(i) == 'a') {
+                contador++;
+            }
+        }
+
+        System.out.println("La letra 'a' aparece " + contador + " veces.");
+    }
+}
