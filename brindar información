@@ -1,0 +1,30 @@
+public class Brindarinformacion {
+
+    public static void main(String[] args) {
+        
+    Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Ingresa el nombre de un artista, película o serie de tu preferencia: ");
+        String eleccion = teclado.nextLine();
+
+        switch (eleccion.toLowerCase()) {
+            case "coldplay":
+                System.out.println("Coldplay es una banda británica de pop rock formada en 1996.");
+                break;
+            case "interstellar":
+                System.out.println("Interstellar es una película de ciencia ficción dirigida por Christopher Nolan.");
+                break;
+            case "stranger things":
+                System.out.println("Stranger Things es una serie de televisión de ciencia ficción y misterio.");
+                break;
+            case "taylor swift":
+                System.out.println("Taylor Swift es una cantante y compositora estadounidense.");
+                break;
+            case "breaking bad":
+                System.out.println("Breaking Bad es una serie de televisión de drama criminal creada por Vince Gilligan.");
+                break;
+            default:
+                System.out.println("No tengo información sobre esa elección.");
+        }
+    }
+}
