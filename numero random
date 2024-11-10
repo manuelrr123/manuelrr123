@@ -1,0 +1,21 @@
+    public static void main(String[] args) {
+       
+
+Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+
+        int numeroAleatorio = random.nextInt(100) + 1;
+        int intento;
+        do {
+            System.out.print("Adivina el número (entre 1 y 100): ");
+            intento = scanner.nextInt();
+            if (intento > numeroAleatorio) {
+                System.out.println("Demasiado alto.");
+            } else if (intento < numeroAleatorio) {
+                System.out.println("Demasiado bajo.");
+            }
+        } while (intento != numeroAleatorio);
+
+        System.out.println("¡Correcto! El número era " + numeroAleatorio);
+    }
+}
