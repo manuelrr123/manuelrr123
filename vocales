@@ -1,0 +1,25 @@
+
+public class VocalesoNoVocales {
+
+    public static void main(String[] args) {
+       
+Scanner scanner = new Scanner(System.in);
+        char letra;
+
+        do {
+            System.out.print("Ingrese una letra: ");
+            letra = scanner.next().toLowerCase().charAt(0);
+
+            if (letra == ' ') {
+                break;
+            }
+
+            if ("aeiou".indexOf(letra) != -1) {
+                System.out.println(letra + " es una vocal.");
+            } else if (Character.isLetter(letra)) {
+                System.out.println(letra + " es una consonante.");
+            }
+        } while (letra != ' ');
+    }
+}
+
