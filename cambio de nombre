@@ -1,0 +1,36 @@
+public class Mavenproject16 {
+
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+           
+            System.out.println("Ingrese un nombre completo en minúsculas (o escriba 'salir' para terminar):");
+            String input = scanner.nextLine();
+
+            
+            if (input.equalsIgnoreCase("salir")) {
+                System.out.println("Programa terminado.");
+                break;
+            }
+
+           
+            String[] palabras = input.split(" "); 
+            StringBuilder nombreConvertido = new StringBuilder();
+
+            for (String palabra : palabras) {
+                if (!palabra.isEmpty()) {
+                    
+                    nombreConvertido.append(Character.toUpperCase(palabra.charAt(0)))
+                                   .append(palabra.substring(1).toLowerCase())
+                                   .append(" ");
+                }
+            }
+
+            
+            System.out.println("Nombre en formato título: " + nombreConvertido.toString().trim());
+        }
+
+        scanner.close();
+    }
+}
