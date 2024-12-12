@@ -1,0 +1,30 @@
+public class Mavenproject15 {
+
+    public class ConteoPalabra {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.println("Ingrese un texto largo:");
+        String texto = scanner.nextLine();
+
+        
+        String palabraClave = "ingeniería";
+
+        
+        String[] palabras = texto.split("\\s+"); 
+        int contador = 0;
+
+        for (String palabra : palabras) {
+            if (palabra.equalsIgnoreCase(palabraClave)) {
+                contador++;
+            }
+        }
+
+        
+        System.out.println("La palabra \"" + palabraClave + "\" aparece " + contador + " veces en el texto.");
+
+        scanner.close();
+    }
+    }
+}
