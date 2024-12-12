@@ -1,0 +1,27 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.Scanner;
+
+public class ConversionDeFechas {
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            System.out.println("Ingrese una fecha en el formato YYYY-MM-DD:");
+            String inputFecha = scanner.nextLine();
+            try {
+                LocalDate fecha = LocalDate.parse(inputFecha, formatter);
+                
+                LocalDate unaSemanaDespues = fecha.plusWeeks(1);
+                LocalDate unMesAntes = fecha.minusMonths(1);
+                
+                System.out.println("Fecha ingresada: " + fecha.format(formatter));
+                System.out.println("Una semana después: " + unaSemanaDespues.format(formatter));
+                System.out.println("Un mes antes: " + unMesAntes.format(formatter));
+            } catch (DateTimeParseException e) {
+                System.out.println("El formato de la fecha ingresada es inválido. Por favor, use el formato YYYY-MM-DD.");
+            }
+        }
+    
+    }
+}
